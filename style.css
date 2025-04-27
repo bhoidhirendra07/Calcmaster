@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(35deg, #160606, #192442);
+}
+
+.calc{
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 17px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(103, 106, 112, 0.6);
+    transition: transform 0.3s ease;
+}
+
+input{
+    width: 330px;
+    border: none;
+    padding: 23px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: -5px -5px 14px rgba(83, 83, 83, 0.1);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Glow effect when typing */
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #fff;
+}
+
+input::placeholder{
+    color: #fff;
+}
+
+button{
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 30%;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: -5px -5px 15px rgba(250, 250, 250, 0.2);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Pop animation on button click */
+button:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Different background on hover */
+button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.equal{
+    background-color: #ecbc1bea;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+/* Slight glow effect for equal button */
+.equal:hover {
+    background-color: #ffd93d;
+    box-shadow: 0 0 10px #ffd93d;
+}
+
+.operators{
+    color: #d1ec4b;
+}
