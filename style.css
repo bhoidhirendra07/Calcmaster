@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -14,76 +14,147 @@ body{
     background: linear-gradient(35deg, #160606, #192442);
 }
 
-.calc{
-    border: 1px solid #717377;
-    padding: 20px;
-    border-radius: 17px;
+.calc {
+    border: 0.1vw solid #717377;
+    padding: 1vw;
+    border-radius: 1.5vw;
     background: transparent;
-    box-shadow: 0px 3px 15px rgba(103, 106, 112, 0.6);
+    box-shadow: 0 0.3vw 1vw rgba(103,106,112,0.6);
+    width: 30vw;
     transition: transform 0.3s ease;
 }
 
-input{
-    width: 330px;
+input {
+    width: 100%;
     border: none;
-    padding: 23px;
-    margin: 10px;
+    padding: 1vw;
+    margin: 1vw 0;
     background: transparent;
-    box-shadow: -5px -5px 14px rgba(83, 83, 83, 0.1);
-    font-size: 40px;
+    box-shadow: inset -0.4vw -0.4vw 1vw rgba(83,83,83,0.1);
+    font-size: 2.5vw;
     text-align: right;
-    cursor: pointer;
     color: #fff;
+    cursor: default;
     transition: all 0.3s ease;
 }
 
-/* Glow effect when typing */
 input:focus {
     outline: none;
-    box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 1vw #fff;
 }
 
-input::placeholder{
+input::placeholder {
     color: #fff;
 }
 
-button{
+button {
     border: none;
-    width: 60px;
-    height: 60px;
-    margin: 10px;
+    width: 5vw;
+    height: 5vw;
+    margin: 1vw;
     border-radius: 30%;
     background: transparent;
     color: #fff;
-    font-size: 20px;
-    box-shadow: -5px -5px 15px rgba(250, 250, 250, 0.2);
+    font-size: 1.5vw;
+    box-shadow: -0.4vw -0.4vw 1vw rgba(250,250,250,0.2);
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
-/* Pop animation on button click */
 button:active {
     transform: scale(0.9);
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0.8vw rgba(255,255,255,0.6);
 }
 
-/* Different background on hover */
 button:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255,255,255,0.1);
 }
 
-.equal{
-    background-color: #ecbc1bea;
+.equal {
+    background-color: #ecbc1b;
     color: #000;
     transition: all 0.3s ease;
 }
 
-/* Slight glow effect for equal button */
 .equal:hover {
     background-color: #ffd93d;
-    box-shadow: 0 0 10px #ffd93d;
+    box-shadow: 0 0 1vw #ffd93d;
 }
 
-.operators{
+.operators {
     color: #d1ec4b;
+}
+
+/* Layout using responsive grid */
+.calc > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*  Responsive Scaling  */
+
+@media (max-width: 1100px) {
+    .calc {
+        width: 40vw;
+    }
+    button {
+        width: 7vw;
+        height: 7vw;
+        font-size: 2vw;
+    }
+    input {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 800px) {
+    .calc {
+        width: 60vw;
+        padding: 3vw;
+    }
+    button {
+        width: 10vw;
+        height: 10vw;
+        font-size: 3vw;
+        margin: 1.5vw;
+    }
+    input {
+        font-size: 5vw;
+        padding: 3vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .calc {
+        width: 85vw;
+        padding: 4vw;
+    }
+    button {
+        width: 14vw;
+        height: 14vw;
+        font-size: 4vw;
+        margin: 2vw;
+    }
+    input {
+        font-size: 7vw;
+        padding: 4vw;
+        margin: 2vw 0;
+    }
+}
+
+@media (max-width: 350px) {
+    .calc {
+        width: 95vw;
+        padding: 5vw;
+    }
+    button {
+        width: 18vw;
+        height: 18vw;
+        font-size: 5vw;
+        margin: 2.5vw;
+    }
+    input {
+        font-size: 8vw;
+        padding: 5vw;
+    }
 }
