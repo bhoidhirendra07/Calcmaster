@@ -157,7 +157,7 @@ button:hover {
 
 @media (max-width: 500px) {
     .calc {
-        width: 85vw;
+        width: 80vw;
         padding: 4vw;
     }
     button {
@@ -175,7 +175,7 @@ button:hover {
 
 @media (max-width: 350px) {
     .calc {
-        width: 95vw;
+        width: 90vw;
         padding: 5vw;
     }
     button {
