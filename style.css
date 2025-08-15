@@ -107,7 +107,21 @@ button:hover {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
+    .calc {
+        width: 50vw;
+    }
+    button {
+        width: 8vw;
+        height: 8vw;
+        font-size: 2.5vw;
+    }
+    input {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 850px) {
     .calc {
         width: 60vw;
         padding: 3vw;
@@ -121,6 +135,23 @@ button:hover {
     input {
         font-size: 5vw;
         padding: 3vw;
+    }
+}
+
+@media (max-width: 720px) {
+    .calc {
+        width: 70vw;
+        padding: 2vw;
+    }
+    button {
+        width: 12vw;
+        height: 12vw;
+        font-size: 3.5vw;
+        margin: 1.5vw;
+    }
+    input {
+        font-size: 6vw;
+        padding: 2vw;
     }
 }
 
